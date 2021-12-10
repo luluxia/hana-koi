@@ -1,0 +1,174 @@
+*
+  margin: 0
+  padding: 0
+body
+  background-image: url('./img/bg.png')
+  background-attachment: fixed
+  width: 100%
+  touch-action: none
+  background-color: #fff
+  background-image: linear-gradient(90deg, transparent 20px, #d8c091 20px, #d8c091 22px, transparent 22px), linear-gradient(#eee .1em, transparent .1em)
+  background-size: 100% 2em
+.App
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+  &::after, &::before
+    content: ""
+    width: 100%
+    height: 5em
+    position: fixed
+    pointer-events: none
+  &::after
+    background: linear-gradient(to bottom, white, transparent)
+    top: 0
+  &::before
+    background: linear-gradient(to top, white, transparent)
+    bottom: 0
+    z-index: 1
+.header
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 1
+  transition: transform 0.3s, opacity 0.3s
+  pointer-events: none
+  p
+    font-size: 1.5em
+    font-weight: bold
+    color: #b4a078
+    padding: 1rem
+    letter-spacing: 2px
+    text-shadow: 0px 1px #f2efed
+    &::after
+      content: ""
+      display: block
+      width: 100%
+      height: 6px
+      background: repeating-linear-gradient(-45deg, #D9CFBB 25%, #C3B393 0, #C3B393 50%, #D9CFBB 0, #D9CFBB 75%, #C3B393 0)
+      background-size: 16px 16px
+      border-radius: 3px
+      position: relative
+      bottom: 4px
+      z-index: -1
+.hide-header
+  transform: translate(0, -2em)
+  opacity: 0
+.home-btns
+  display: flex
+  position: fixed
+  bottom: 0.5em
+  right: 0.5em
+  z-index: 1
+  align-items: flex-end
+  transition: transform 0.3s, opacity 0.3s
+.btn
+  width: 4em
+  height: 4em
+  border-radius: 0.2em
+  background: rgba(239, 235, 233, 0.8)
+  outline: #B4A078 dashed 1px
+  outline-offset: -6px
+  box-shadow: 0px 2px #d8c091, 0px 0px 0px 2px inset #b4a078
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  margin: 0.25em
+  p
+    font-size: 0.8em
+    color: #826c41
+  img
+    height: 2em
+    position: relative
+.hide-btns
+  transform: translate(0, 2em)
+  opacity: 0
+  pointer-events: none
+
+.bag
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: rgba(255, 255, 255, 0.7)
+  transition: opacity 0.3s
+  padding: 3em 0
+.hide-bag
+  opacity: 0
+  pointer-events: none
+.bag-tag-list
+  display: flex
+  flex-wrap: nowrap
+  width: max-content
+.bag-tag-item
+  list-style: none
+  margin-right: 0.5em
+  border: 2px solid transparent
+  border-radius: 5em
+  padding: 0.2em 0.6em
+  background: rgba(239, 235, 233, 0.8)
+  font-size: 0.9em
+  color: #94815c
+  letter-spacing: 1px
+  margin: 1em 0.5em
+  &:first-child
+    margin-left: 1em
+  &:last-child
+    margin-right: 1em
+.bag-choose-tag
+  border: 2px dashed #94815c
+
+.scroll
+  position: fixed
+.card
+  transform: rotate(5deg)
+  height: fit-content
+  img
+    display: block
+    width: 15em
+  &::after, &::before
+    content: ""
+    background: url(./img/txr3.png)
+    height: 2px
+    width: 100%
+    display: block
+  &::after
+    bottom: 0
+    position: absolute
+  &::before
+    top: 0
+    position: absolute
+.content
+  &::after, &::before
+    content: ""
+    background: url(./img/txr3.png)
+    width: 2px
+    height: 100%
+    display: block
+  &::after
+    left: 0
+    top: 0
+    position: absolute
+  &::before
+    right: 0
+    position: absolute
+.logo
+  width: 20em
+
+// 背包-文字
+.bag-context
+  padding: 0 1em
+.bag-text-textarea
+  width: calc( 100% - 2rem )
+  height: 12rem
+  outline: none
+  border: 2px dashed #94815c
+  border-radius: 0.2em
+  background: rgba(255, 255, 255, 0.8)
+  padding: 1rem
+  font-size: 1rem
+  font-family: inherit
+  touch-action: none
